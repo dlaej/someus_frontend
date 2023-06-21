@@ -1,0 +1,167 @@
+/* 타이틀 */
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 버튼서체 */
+@font-face {
+    font-family: 'OSeongandHanEum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OSeongandHanEum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { box-sizing: border-box; }
+
+/* 백그라운드 이미지 */
+.diarylist_background {
+    background-image: url('../img/bg_mylist.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    padding: 80px 100px;
+    box-sizing: border-box;
+}
+
+.diarylist_background::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* 달력 부분 */
+.calendar-container {
+    float: left;
+    height: 100%;
+    width: 28%;
+    padding-right: 70px;
+    /* border-right: 2px solid #2179F9; */
+    clear: both;
+}
+
+.calendar-box {
+    width: 380px;
+    margin: auto;
+}
+
+/* 이번달 목표 */
+.todo-box {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 380px;
+}
+
+/* 다이어리 부분 */
+.diary-container {
+    padding-left: 70px;
+    float: left;
+    text-align: center;
+    height: auto;
+    min-height: 1000px;
+    border-left: 2px solid #2179F9;
+}
+
+/* 월, 이름 뜨는 부분 */
+.diary-container .name_diary {
+    margin: 0px;
+    font-family: 'Tenada';
+    font-size: 24px;
+}
+
+.date {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-family: 'Tenada';
+    font-size: 34px;
+}
+
+/* 쓰기버튼 */
+.diary-container .private_write {
+    width: 80px;
+    height: 50px;
+    line-height: 45px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-right: 16px;
+    padding: 0px 20px;
+    border-radius: 50px;
+    float: right;
+    transition: all .0.5s ease;
+    background-color: #B4D4FC;
+    border: 3px solid #2179F9;
+}
+
+.diary-container .private_write:hover {
+    background-color: #2179F9;
+    border: 3px solid #B4D4FC;
+    box-shadow: 0px 0px 5px #2179F9;
+    width: 155px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* 쓰기버튼 아이콘 */
+.diary-container .privateWrite-button {
+    background-image: url('../img/navicon_write.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 45px;
+    float: left;
+}
+
+/* 쓰기버튼 텍스트 */
+.diary-container .private_write .private_writetext {
+    display: none;
+    font-weight: 600;
+    font-family: 'OSeongandHanEum';
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+}
+
+.diary-container .private_write:hover .private_writetext {
+    opacity: 1;
+    display: block;
+}
+
+/* 다이어리 리스트 */
+.diary {
+    height: auto;
+    width: 100%;
+    vertical-align: center;
+    box-sizing: border-box;
+}
+
+.diary .diaryWrap {
+    clear: both;
+    margin: auto;
+    width: 1166px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.diaryeachbutton {
+    border: none;
+    background: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.diary .diaryWrap::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 1920px) {
+    .diarylist_background {
+        width: 1920px;
+    }
+}
+
